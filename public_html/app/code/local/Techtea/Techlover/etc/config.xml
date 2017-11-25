@@ -1,0 +1,69 @@
+<config>
+	<frontend>
+        <routers>
+            <techlover>
+                <use>standard</use>
+                <args>
+                    <module>Techtea_Techlover</module>
+                    <frontName>techlover</frontName>
+                </args>
+            </techlover>
+        </routers>    
+    </frontend>
+
+    <modules>
+        <Techtea_Techlover>
+            <version>0.1.0</version>
+        </Techtea_Techlover>
+    </modules>
+
+    <global>
+     	 <models>
+	        <techlover>
+	            <class>Techtea_techlover_Model</class>
+	            <!-- 
+	            need to create our own resource, can't just
+	            use core_mysql4
+	            -->
+	            <resourceModel>techlover_mysql4</resourceModel>
+	        </techlover> 
+	        <techlover_mysql4>
+	            <class>Techtea_Techlover_Model_Mysql4</class>                
+	        </techlover_mysql4>
+
+	         <techlover_mysql4>
+            <class>Techtea_Techlover_Model_Mysql4</class>
+            <entities>
+                <techjob>
+                    <table>tech_job</table>
+                </techjob>
+            </entities>                    
+        </techlover_mysql4>       
+	    </models>
+
+        <events>
+            <controller_front_init_routers>
+                <observers>
+                    <techtea_techlover_model_observer>
+                        <type>singleton</type>                            
+                        <class>Techtea_Techlover_Model_Observer</class>
+                        <method>checkForConfigRequest</method>
+                    </techtea_techlover_model_observer>
+                </observers>
+            </controller_front_init_routers>
+        </events>
+
+        <resources>
+	        <techlover_write>
+	            <connection>
+	                <use>core_write</use>
+	            </connection>
+	        </techlover_write>
+	        <techlover_read>
+	            <connection>
+	                <use>core_read</use>
+	            </connection>
+	        </techlover_read>    
+	    </resources>        
+    </global>
+</config>

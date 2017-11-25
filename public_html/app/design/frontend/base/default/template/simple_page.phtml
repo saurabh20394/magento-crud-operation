@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Untitled</title>
+  <meta name="generator" content="BBEdit 9.2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2 style="text-align: center;">Tech Job</h2>
+    <p id="demo"></p>
+    <div class="row" style="float: right;"><button type="button" id="addbutton" class="btn btn-success">Add Data</button></div>
+    <div class="row"> 
+      <table class="table table-bordered" id="myTable">
+        <tr>
+        </tr>
+      </table>
+    </div>
+    <div class="row">
+      <form class="form-horizontal" id="myjobform">
+        <div class="form-group">
+          <div class="col-sm-10">
+            <input type="hidden" class="form-control" id="id" name="sid">
+          </div>
+        </div> 
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Name:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="sname" name="sname">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">Job:</label>
+          <div class="col-sm-10">          
+            <input type="text" class="form-control" id="jobs" name="job">
+          </div>
+        </div>
+
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-default" id="add" type="button" onclick="crudOperation(0,1)">Add</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+<script>
+
+  function displayData(){
+        var formURL = "<?php echo $this->getUrl('techlover/index/showAllJob'); ?>";  
+    jQuery.ajax({
+        type: "POST",
+        url: formURL,
+        dataType: 'json',
+      success: function(result){
+          //console.log(result);
+        var jobData = '<tr><th>Sr. No.</th><th>Employee Name</th><th>Job Profile</th><th>Edit</th> <th>Delete</th></tr>';
+        $.each(result, function(index, element){
+          var srno = index+1;
+          var sid = element.s_id;
+          var ename = element.name;
+          var ejob = element.job;
+          jobData += '<tr>';
+          jobData += '<td>'+srno+'</td>';
+          jobData += '<td>'+ename+'</td>';
+          jobData += '<td>'+ejob +'</td>';
+          jobData += '<td>'+ '<button id="edit" onclick="return editData(' + sid + ',\'' + ename + '\''+',\''+ ejob +'\')">Edit</button>'+'</td>';
+          jobData += '<td>'+'<button id="delete" onclick="return crudOperation('+sid+''+','+''+4+')">Delete</button>'+'</td>';
+          jobData += '</tr>';
+        });            
+          $("#myTable tbody").html(jobData);
+      } 
+    }); 
+  }
+
+  function editData(sid,ename,ejob){
+    $('#id').val(sid);
+    $('#sname').val(ename);
+    $('#jobs').val(ejob);
+    $("#add").html('Update');
+    $("#myjobform").show();
+  }
+
+  jQuery(document).ready(function(){
+    displayData();
+  });
+
+  jQuery("#update").hide();					
+  function crudOperation(id,flag){
+    //alert(id);
+    if(flag==1){
+      var id = jQuery("#id").val();
+    }
+    var sname = jQuery("#sname").val();
+    var job = jQuery("#jobs").val();
+    //alert(id+''+sname+''+job+''+flag);
+    var postData = {"id":id,"name":sname,"job":job,"flag":flag};
+    //alert(postData);
+    console.log(postData);
+    var formURL = "<?php echo $this->getUrl('techlover/index/savesData'); ?>";
+    //alert(formURL);
+    jQuery.ajax({
+      type: "POST",
+      url: formURL,
+      data: postData,
+      dataType: 'json',
+      success: function(result)
+      {
+        //alert(result);
+        //console.log(result);
+        jQuery("#id").val("");    
+        jQuery("#sname").val("");
+        jQuery("#jobs").val("");
+        displayData();
+      }
+    });
+    return false;
+  }
+
+  $("#myjobform").hide();
+  $("#addbutton").click(function(e) {
+    jQuery("#id").val("");    
+    jQuery("#sname").val("");
+    jQuery("#jobs").val("");
+    $("#add").html('Add');
+    $("#myjobform").show();
+    e.preventDefault();
+  });
+  $("#add").click(function(e) {
+    $("#myjobform").hide();
+    e.preventDefault();
+  });
+</script>
+</html>

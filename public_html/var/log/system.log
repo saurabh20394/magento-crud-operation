@@ -1,0 +1,164 @@
+2017-11-20T10:59:29+00:00 DEBUG (7): Techtea_Weblog_Model_Blogpost Object
+(
+    [_eventPrefix:protected] => core_abstract
+    [_eventObject:protected] => object
+    [_resourceName:protected] => weblog/blogpost
+    [_resource:protected] => 
+    [_resourceCollectionName:protected] => weblog/blogpost_collection
+    [_cacheTag:protected] => 
+    [_dataSaveAllowed:protected] => 1
+    [_isObjectNew:protected] => 
+    [_data:protected] => Array
+        (
+            [blogpost_id] => 1
+            [title] => My New Title
+            [post] => This is a blog post
+            [date] => 2009-07-01 00:00:00
+            [timestamp] => 2009-07-02 23:12:30
+        )
+
+    [_hasDataChanges:protected] => 
+    [_origData:protected] => Array
+        (
+            [blogpost_id] => 1
+            [title] => My New Title
+            [post] => This is a blog post
+            [date] => 2009-07-01 00:00:00
+            [timestamp] => 2009-07-02 23:12:30
+        )
+
+    [_idFieldName:protected] => 
+    [_isDeleted:protected] => 
+    [_oldFieldsMap:protected] => Array
+        (
+        )
+
+    [_syncFieldsMap:protected] => Array
+        (
+        )
+
+)
+
+2017-11-20T11:00:07+00:00 DEBUG (7): Techtea_Weblog_Model_Blogpost Object
+(
+    [_eventPrefix:protected] => core_abstract
+    [_eventObject:protected] => object
+    [_resourceName:protected] => weblog/blogpost
+    [_resource:protected] => 
+    [_resourceCollectionName:protected] => weblog/blogpost_collection
+    [_cacheTag:protected] => 
+    [_dataSaveAllowed:protected] => 1
+    [_isObjectNew:protected] => 
+    [_data:protected] => Array
+        (
+            [blogpost_id] => 1
+            [title] => My New Title
+            [post] => This is a blog post
+            [date] => 2009-07-01 00:00:00
+            [timestamp] => 2009-07-02 23:12:30
+        )
+
+    [_hasDataChanges:protected] => 
+    [_origData:protected] => Array
+        (
+            [blogpost_id] => 1
+            [title] => My New Title
+            [post] => This is a blog post
+            [date] => 2009-07-01 00:00:00
+            [timestamp] => 2009-07-02 23:12:30
+        )
+
+    [_idFieldName:protected] => 
+    [_isDeleted:protected] => 
+    [_oldFieldsMap:protected] => Array
+        (
+        )
+
+    [_syncFieldsMap:protected] => Array
+        (
+        )
+
+)
+
+2017-11-20T11:00:56+00:00 DEBUG (7): Techtea_Weblog_Model_Blogpost Object
+(
+    [_eventPrefix:protected] => core_abstract
+    [_eventObject:protected] => object
+    [_resourceName:protected] => weblog/blogpost
+    [_resource:protected] => 
+    [_resourceCollectionName:protected] => weblog/blogpost_collection
+    [_cacheTag:protected] => 
+    [_dataSaveAllowed:protected] => 1
+    [_isObjectNew:protected] => 
+    [_data:protected] => Array
+        (
+            [blogpost_id] => 1
+            [title] => My New Title
+            [post] => This is a blog post
+            [date] => 2009-07-01 00:00:00
+            [timestamp] => 2009-07-02 23:12:30
+        )
+
+    [_hasDataChanges:protected] => 
+    [_origData:protected] => Array
+        (
+            [blogpost_id] => 1
+            [title] => My New Title
+            [post] => This is a blog post
+            [date] => 2009-07-01 00:00:00
+            [timestamp] => 2009-07-02 23:12:30
+        )
+
+    [_idFieldName:protected] => 
+    [_isDeleted:protected] => 
+    [_oldFieldsMap:protected] => Array
+        (
+        )
+
+    [_syncFieldsMap:protected] => Array
+        (
+        )
+
+)
+
+2017-11-20T11:01:04+00:00 DEBUG (7): Techtea_Weblog_Model_Blogpost Object
+(
+    [_eventPrefix:protected] => core_abstract
+    [_eventObject:protected] => object
+    [_resourceName:protected] => weblog/blogpost
+    [_resource:protected] => 
+    [_resourceCollectionName:protected] => weblog/blogpost_collection
+    [_cacheTag:protected] => 
+    [_dataSaveAllowed:protected] => 1
+    [_isObjectNew:protected] => 
+    [_data:protected] => Array
+        (
+            [blogpost_id] => 1
+            [title] => My New Title
+            [post] => This is a blog post
+            [date] => 2009-07-01 00:00:00
+            [timestamp] => 2009-07-02 23:12:30
+        )
+
+    [_hasDataChanges:protected] => 
+    [_origData:protected] => Array
+        (
+            [blogpost_id] => 1
+            [title] => My New Title
+            [post] => This is a blog post
+            [date] => 2009-07-01 00:00:00
+            [timestamp] => 2009-07-02 23:12:30
+        )
+
+    [_idFieldName:protected] => 
+    [_isDeleted:protected] => 
+    [_oldFieldsMap:protected] => Array
+        (
+        )
+
+    [_syncFieldsMap:protected] => Array
+        (
+        )
+
+)
+

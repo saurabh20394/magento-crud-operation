@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <techlover_index_insertjob>
+        <reference name="root">
+            <block type="page/html" name="root" output="toHtml" template="simple_page.phtml">
+        	</block>
+        </reference>
+    </techlover_index_insertjob>
+</layout>    

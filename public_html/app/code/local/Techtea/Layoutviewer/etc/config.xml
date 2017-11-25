@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>	
+	<global>
+		<models>
+			<techtea_layoutviewer>
+				<class>Techtea_Layoutviewer_Model</class>
+			</techtea_layoutviewer> 
+			
+			<core>
+				<rewrite>
+					<layout_update>Techtea_Layoutviewer_Model_Layout_Update</layout_update>
+				</rewrite>
+			</core>
+			
+		</models>
+	
+		<!-- <events>
+			<controller_action_postdispatch>
+				<observers>
+					<techtea_layoutviewer_model_observer>
+						<type>singleton</type>						
+						<class>Techtea_Layoutviewer_Model_Observer</class>
+						<method>checkForLayoutDisplayRequest</method>
+					</techtea_layoutviewer_model_observer>
+				</observers>
+			</controller_action_postdispatch>
+		</events> -->
+	</global>	
+</config>

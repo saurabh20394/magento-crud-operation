@@ -1,0 +1,8 @@
+<config>
+	<modules>
+		<Techtea_Techlover>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Techtea_Techlover>
+	</modules>
+</config>		 
